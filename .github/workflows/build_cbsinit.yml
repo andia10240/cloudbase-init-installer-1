@@ -9,11 +9,11 @@ jobs:
     strategy:
       max-parallel: 100
       matrix:
-        cbsinit_repo: ['https://github.com/andia10240/cloudbase-init']
-        cbsinit_branch: ['master']
+        cbsinit_repo: ['https://github.com/andia10240/cloudbase-init.git']
+        cbsinit_branch: ['windows']
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build msi
